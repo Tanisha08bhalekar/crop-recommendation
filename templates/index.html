@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Recommendation System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #f0fff0; 
+            text-align: center; 
+            padding: 20px; 
+        }
+        h1 { color: green; }
+        h2 { color: brown; font-weight: normal; margin-bottom: 20px; }
+        form { 
+            background: #fff; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0px 0px 10px #ccc; 
+            max-width: 400px; 
+            margin: auto; 
+        }
+        label { 
+            display: block; 
+            margin: 10px 0 5px; 
+            font-weight: bold; 
+            color: brown; 
+        }
+        input { 
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            margin-bottom: 15px; 
+        }
+        button { 
+            background: green; 
+            color: white; 
+            padding: 10px 20px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 16px; 
+        }
+        button:hover { background: darkgreen; }
+    </style>
+</head>
+<body>
+    <h1>Crop Recommendation System</h1>
+    <h2>AI powered recommendation for your farm</h2>
+    
+    <form action="/predict" method="post">
+        <label for="nitrogen">Nitrogen (kg/ha)</label>
+        <input type="number" id="nitrogen" name="nitrogen" required>
+        
+        <label for="phosphorus">Phosphorus (kg/ha)</label>
+        <input type="number" id="phosphorus" name="phosphorus" required>
+        
+        <label for="potassium">Potassium (kg/ha)</label>
+        <input type="number" id="potassium" name="potassium" required>
+        
+        <label for="temperature">Temperature (°C)</label>
+        <input type="number" step="0.1" id="temperature" name="temperature" required>
+        
+        <label for="humidity">Humidity (%)</label>
+        <input type="number" step="0.1" id="humidity" name="humidity" required>
+        
+        <label for="ph">pH</label>
+        <input type="number" step="0.1" id="ph" name="ph" required>
+        
+        <label for="rainfall">Rainfall (mm)</label>
+        <input type="number" step="0.1" id="rainfall" name="rainfall" required>
+        
+        <button type="submit">Get Recommendation</button>
+    </form>
+</body>
+</html>
