@@ -49,29 +49,42 @@
     <h1>Crop Recommendation System</h1>
     <h2>AI powered recommendation for your farm</h2>
     
-    <form action="/predict" method="post">
-        <label for="nitrogen">Nitrogen (kg/ha)</label>
-        <input type="number" id="nitrogen" name="nitrogen" required>
-        
-        <label for="phosphorus">Phosphorus (kg/ha)</label>
-        <input type="number" id="phosphorus" name="phosphorus" required>
-        
-        <label for="potassium">Potassium (kg/ha)</label>
-        <input type="number" id="potassium" name="potassium" required>
-        
-        <label for="temperature">Temperature (°C)</label>
-        <input type="number" step="0.1" id="temperature" name="temperature" required>
-        
-        <label for="humidity">Humidity (%)</label>
-        <input type="number" step="0.1" id="humidity" name="humidity" required>
-        
-        <label for="ph">pH</label>
-        <input type="number" step="0.1" id="ph" name="ph" required>
-        
-        <label for="rainfall">Rainfall (mm)</label>
-        <input type="number" step="0.1" id="rainfall" name="rainfall" required>
-        
-        <button type="submit">Get Recommendation</button>
-    </form>
+
+    <form action="/predict" method="post" align="center">
+  <table align="center">
+    <tr>
+      <td><label for="nitrogen">Nitrogen (kg/ha)</label></td>
+      <td><input type="number" id="nitrogen" name="nitrogen" required></td>
+    </tr>
+    <tr>
+      <td><label for="phosphorus">Phosphorus (kg/ha)</label></td>
+      <td><input type="number" id="phosphorus" name="phosphorus" required></td>
+    </tr>
+    <tr>
+      <td><label for="potassium">Potassium (kg/ha)</label></td>
+      <td><input type="number" id="potassium" name="potassium" required></td>
+    </tr>
+    <tr>
+      <td><label for="temperature">Temperature (°C)</label></td>
+      <td><input type="number" step="0.1" id="temperature" name="temperature" required></td>
+    </tr>
+    <tr>
+      <td><label for="humidity">Humidity (%)</label></td>
+      <td><input type="number" step="0.1" id="humidity" name="humidity" required></td>
+    </tr>
+    <tr>
+      <td><label for="ph">pH</label></td>
+      <td><input type="number" step="0.1" id="ph" name="ph" required></td>
+    </tr>
+    <tr>
+      <td><label for="rainfall">Rainfall (mm)</label></td>
+      <td><input type="number" step="0.1" id="rainfall" name="rainfall" required></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><button type="submit">Get Recommendation</button></td>
+    </tr>
+  </table>
+</form>
+
 </body>
 </html>
