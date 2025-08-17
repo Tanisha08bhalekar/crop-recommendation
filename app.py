@@ -19,17 +19,19 @@ ALL_CROPS = [
 ]
 
 # Automatically detect images in static/ folder
-CROP_IMAGE_MAP = {}
-for crop in ALL_CROPS:
-    matched_files = [f for f in os.listdir(STATIC_FOLDER) if crop.lower() in f.lower()]
-    if matched_files:
-        CROP_IMAGE_MAP[crop] = matched_files[0]  # use first match
-    else:
-        CROP_IMAGE_MAP[crop] = "placeholder.jpg"  # ensure placeholder exists
-        print(f"Warning: No image found for {crop}, using placeholder.")
-
-print("CROP_IMAGE_MAP:", CROP_IMAGE_MAP)
-
+CROP_IMAGE_MAP = {
+    "rice": "rice.jpg",
+    "wheat": "wheat.jpeg",
+    "millet": "millet.jpeg",
+    "maize": "maize.jpg",
+    "chickpea": "chickpea.jpg",
+    "lentil": "lentil.jpg",
+    "pigeonpea": "pigeonpea.jpeg",
+    "groundnut": "groundnut.jpg",
+    "barley": "barley.jpeg",
+    "mothbeans": "mothbeans.jpeg",      # <-- make sure exact filename here
+    "kidneybeans": "kidneybeans.jpeg"   # <-- make sure exact filename here
+}
 
 # Crop descriptions
 DESCRIPTIONS = {
@@ -87,6 +89,11 @@ def predict():
     except Exception as e:
         return f"Error: {e}"
 
+@app.route('/debug_images')
+def debug_images():
+    import os
+    files = os.listdir("static")
+    return "<br>".join(files)
 
 if __name__ == "__main__":
     app.run(debug=True)
